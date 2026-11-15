@@ -17,30 +17,28 @@
   <circle cx="60" cy="420" r="140" fill="#ffffff" opacity="0.06"/>
 
   <!-- Texto -->
-  <text x="80" y="150" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#bfdbfe" letter-spacing="3">PLUGIN PARA CLAUDE CODE E AGY</text>
+  <text x="80" y="150" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="600" fill="#bfdbfe" letter-spacing="3">PLUGIN PARA CLAUDE CODE E AGY</text>
   <text x="80" y="228" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="78" font-weight="800" fill="#ffffff">drive-hub-sync</text>
   <text x="80" y="285" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" fill="#e0ecff">Seus projetos organizados no Google Drive.</text>
   <text x="80" y="330" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" fill="#e0ecff">Sem copiar uma linha de código.</text>
 
   <!-- Ilustração: pastas -->
   <g fill="#0b1b4d" opacity="0.28">
-    <rect x="800" y="120" width="380" height="64" rx="14"/>
-    <rect x="830" y="206" width="380" height="64" rx="14"/>
-    <rect x="800" y="292" width="380" height="64" rx="14"/>
+    <rect x="770" y="120" width="450" height="64" rx="14"/>
+    <rect x="800" y="206" width="450" height="64" rx="14"/>
+    <rect x="770" y="292" width="450" height="64" rx="14"/>
   </g>
-  <g>
-    <rect x="800" y="110" width="380" height="64" rx="14" fill="url(#card)"/>
-    <rect x="830" y="196" width="380" height="64" rx="14" fill="url(#card)"/>
-    <rect x="800" y="282" width="380" height="64" rx="14" fill="url(#card)"/>
+  <g fill="url(#card)">
+    <rect x="770" y="110" width="450" height="64" rx="14"/>
+    <rect x="800" y="196" width="450" height="64" rx="14"/>
+    <rect x="770" y="282" width="450" height="64" rx="14"/>
   </g>
-  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#1e3a8a">
-    <text x="860" y="151">02 · Arquitetura e Diagramas</text>
-    <text x="890" y="237">03 · Releases e Roadmap</text>
-    <text x="860" y="323">04 · Marketing e Landing Page</text>
-  </g>
-  <g>
-    <circle cx="830" cy="142" r="14" fill="#2563eb"/>
-    <circle cx="860" cy="228" r="14" fill="#06b6d4"/>
-    <circle cx="830" cy="314" r="14" fill="#f59e0b"/>
+  <circle cx="802" cy="142" r="12" fill="#2563eb"/>
+  <circle cx="832" cy="228" r="12" fill="#06b6d4"/>
+  <circle cx="802" cy="314" r="12" fill="#f59e0b"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#1e3a8a">
+    <text x="826" y="149">02 · Arquitetura e Diagramas</text>
+    <text x="856" y="235">03 · Releases e Roadmap</text>
+    <text x="826" y="321">04 · Marketing e Landing Page</text>
   </g>
 </svg>
