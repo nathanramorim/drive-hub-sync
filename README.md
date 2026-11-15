@@ -99,6 +99,7 @@ Há uma versão ilustrada, em linguagem simples, em [`site/index.html`](site/ind
 
 | Versão | Novidades |
 |---|---|
+| **0.1.1** | Corrige o texto do banner que saía dos rótulos das pastas. |
 | **0.1.0** | Primeira versão: `/drive-setup`, `/drive-sync`, skill `drive-hub`, esqueleto do hub e página de apresentação. |
 
 ## Licença
