@@ -1,6 +1,6 @@
 {
   "name": "drive-hub-sync",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Estrutura e sincroniza a documentação executiva de um projeto (docs, releases, diagramas, marketing) com uma pasta do Google Drive, sem copiar código-fonte.",
   "license": "MIT",
   "keywords": ["google-drive", "documentacao", "sync", "hub"]
