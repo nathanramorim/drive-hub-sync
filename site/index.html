@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>drive-hub-sync: organize seus projetos no Google Drive</title>
+  <meta name="description" content="Plugin que organiza e atualiza a documentação dos seus projetos no Google Drive, sem copiar código.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <h1>📁 drive-hub-sync</h1>
+      <p>Um ajudante que organiza a documentação dos seus projetos no seu Google Drive. Você só diz onde guardar, e ele cuida do resto.</p>
+    </div>
+  </header>
+
+  <nav class="menu">
+    <div class="container">
+      <a href="#o-que-e">O que é</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#instalar">Como instalar</a>
+      <a href="#usar">Como usar</a>
+      <a href="#seguranca">Segurança</a>
+      <a href="#duvidas">Dúvidas</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section id="o-que-e">
+      <h2>O que é isso?</h2>
+      <div class="card">
+        <p>Todo projeto tem documentos: histórico de novidades, desenhos de como as coisas funcionam, textos do site e materiais de divulgação. Com o tempo eles se espalham e ficam difíceis de achar.</p>
+        <p>O <strong>drive-hub-sync</strong> cria uma pasta bem arrumada no seu Google Drive para cada projeto e mantém tudo atualizado. É como ter um arquivo organizado que se atualiza quando você pede.</p>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="icon">🗂️</div><h3>Pasta organizada</h3><p>Cria um conjunto fixo de pastas numeradas, igual para todos os seus projetos.</p></div>
+        <div class="card"><div class="icon">🔄</div><h3>Atualiza quando você pede</h3><p>Depois de uma novidade no projeto, um comando coloca o resumo no lugar certo.</p></div>
+        <div class="card"><div class="icon">🔒</div><h3>Sem código</h3><p>Só vão textos, imagens e vídeos. O código do projeto nunca é copiado.</p></div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <h2>Como as pastas ficam</h2>
+      <div class="card">
+        <p>Dentro da pasta do Drive que você escolher, ele cria uma pasta com o nome do projeto:</p>
+        <div class="code-box"><pre>Meu Drive/
+└── Projetos/
+    └── meu-projeto/
+        ├── 00-LEIA-ME-INDICE-GERAL.md
+        ├── 01-Documentacao-Base-IA/
+        ├── 02-Arquitetura-e-Diagramas/
+        ├── 03-Releases-e-Roadmap/
+        └── 04-Marketing-e-Landing-Page/</pre></div>
+        <ul>
+          <li><strong>00:</strong> índice, um "sumário" para achar tudo.</li>
+          <li><strong>01:</strong> resumo do projeto escrito para uma IA entender rápido.</li>
+          <li><strong>02:</strong> desenhos e decisões de como o projeto é montado.</li>
+          <li><strong>03:</strong> histórico de novidades e o que vem pela frente.</li>
+          <li><strong>04:</strong> textos do site, imagens e ideias de posts.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="instalar">
+      <h2>Como instalar</h2>
+      <p>Antes, você precisa de duas coisas:</p>
+      <ol class="steps">
+        <li>O programa <strong>Google Drive para computador</strong> instalado e com login feito. Assim a pasta do Drive aparece no seu computador.</li>
+        <li>O <strong>Claude Code</strong> ou o <strong>agy (Antigravity)</strong>, o programa de IA que você usa.</li>
+      </ol>
+
+      <p><strong>Escolha o que você usa:</strong></p>
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="claude" role="tab" aria-selected="true">Uso o Claude</button>
+        <button class="tab-btn" data-tab="agy" role="tab" aria-selected="false">Uso o agy</button>
+      </div>
+
+      <div id="tab-claude" class="tab-panel active">
+        <div class="card">
+          <h3>Instalando no Claude Code</h3>
+          <ol class="steps">
+            <li>Abra o Claude Code e cole este comando:
+              <div class="code-box"><pre>/plugin marketplace add nathanramorim/drive-hub-sync</pre><button class="copy-btn">Copiar</button></div>
+            </li>
+            <li>Agora instale o plugin:
+              <div class="code-box"><pre>/plugin install drive-hub-sync@drive-hub-sync</pre><button class="copy-btn">Copiar</button></div>
+            </li>
+            <li>Pronto! Digite <code class="inline">/drive-setup</code> para ver se aparece. Se aparecer, está instalado.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div id="tab-agy" class="tab-panel">
+        <div class="card">
+          <h3>Instalando no agy (Antigravity)</h3>
+          <p>No agy, o plugin funciona como uma "habilidade": você copia uma pasta para dentro do seu projeto.</p>
+          <ol class="steps">
+            <li>Dentro do seu projeto, abra o terminal e baixe o plugin, depois copie a pasta <code class="inline">skills/drive-hub</code> para <code class="inline">.agents/skills</code>:
+              <div class="code-box"><pre>git clone https://github.com/nathanramorim/drive-hub-sync.git
+mkdir -p .agents/skills
+cp -R drive-hub-sync/skills/drive-hub .agents/skills/</pre><button class="copy-btn">Copiar</button></div>
+            </li>
+            <li>Abra o agy no projeto e escreva em português normal, sem comandos especiais:
+              <div class="code-box"><pre>Configure o hub do Drive para este projeto</pre><button class="copy-btn">Copiar</button></div>
+            </li>
+          </ol>
+          <div class="note">Os comandos <code class="inline">/drive-setup</code> e <code class="inline">/drive-sync</code> são do Claude. No agy você pede com palavras normais, como no exemplo acima.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="usar">
+      <h2>Como usar</h2>
+
+      <h3>1. Configurar (só uma vez por projeto)</h3>
+      <div class="card">
+        <p>Peça para configurar. No Claude, digite <code class="inline">/drive-setup</code>. No agy, escreva "Configure o hub do Drive para este projeto". Ele vai perguntar:</p>
+        <ul>
+          <li>Em qual pasta do seu Drive guardar? (exemplo: <code class="inline">Meu Drive/Projetos</code>)</li>
+          <li>Qual é o nome do projeto?</li>
+          <li>De quais pastas do projeto ele deve ler os documentos?</li>
+        </ul>
+        <p>Ele mostra o que vai criar e <strong>espera você dizer "sim"</strong> antes de mexer em qualquer coisa.</p>
+      </div>
+
+      <h3>2. Atualizar (sempre que houver novidade)</h3>
+      <div class="card">
+        <p>Fez uma nova versão, mudou algo importante ou atualizou o site? Peça para sincronizar. No Claude, digite <code class="inline">/drive-sync</code>. No agy, escreva "Sincronize o projeto com o Drive".</p>
+        <p>Você também pode escolher só uma parte:</p>
+        <ul>
+          <li><code class="inline">/drive-sync release</code>: só as novidades da versão</li>
+          <li><code class="inline">/drive-sync arquitetura</code>: só os desenhos e decisões</li>
+          <li><code class="inline">/drive-sync marketing</code>: só textos e imagens de divulgação</li>
+        </ul>
+        <p>Antes de gravar, ele mostra um resumo e pede sua confirmação.</p>
+      </div>
+    </section>
+
+    <section id="seguranca">
+      <h2>É seguro?</h2>
+      <div class="card">
+        <ul>
+          <li><span class="safe">✔</span> <strong>Nunca copia código</strong> do seu projeto, nem senhas, nem arquivos secretos.</li>
+          <li><span class="safe">✔</span> <strong>Só escreve dentro da pasta do projeto no Drive.</strong> Não mexe em outras pastas suas.</li>
+          <li><span class="safe">✔</span> <strong>Sempre pergunta antes de gravar.</strong></li>
+          <li><span class="safe">✔</span> Seu caminho pessoal fica num arquivo <code class="inline">.drive-hub.json</code> que não vai para o git, então não vaza se você compartilhar o projeto.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="duvidas">
+      <h2>Dúvidas comuns</h2>
+      <details>
+        <summary>Não acho a pasta do Google Drive no computador.</summary>
+        <p>Instale o "Google Drive para computador" e entre na sua conta. No Mac, a pasta fica em <code class="inline">Biblioteca/CloudStorage</code>; o plugin procura por ela sozinho. No Windows e no Linux ele vai pedir que você informe o caminho.</p>
+      </details>
+      <details>
+        <summary>Posso usar com vários projetos?</summary>
+        <p>Pode. Rode a configuração uma vez em cada projeto. Todos ficam com o mesmo padrão de pastas.</p>
+      </details>
+      <details>
+        <summary>Posso mudar o nome das pastas numeradas?</summary>
+        <p>Pode. Os nomes são só um ponto de partida. Edite o arquivo <code class="inline">.drive-hub.json</code> ou peça para a IA ajustar.</p>
+      </details>
+      <details>
+        <summary>Meu amigo usa outro Drive. Funciona?</summary>
+        <p>Funciona. O destino é sempre escolhido por quem instala, então cada pessoa usa o seu próprio Drive.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">drive-hub-sync · versão 0.1.0 · licença MIT</div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

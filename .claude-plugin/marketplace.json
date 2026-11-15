@@ -1,0 +1,11 @@
+{
+  "name": "drive-hub-sync",
+  "owner": { "name": "drive-hub-sync" },
+  "plugins": [
+    {
+      "name": "drive-hub-sync",
+      "source": "./",
+      "description": "Hub de documentação de projetos no Google Drive, configurável por usuário."
+    }
+  ]
+}
