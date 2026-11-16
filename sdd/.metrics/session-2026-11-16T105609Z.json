@@ -1,0 +1,29 @@
+{
+  "$schema": "forge-sdd/metrics/1.0",
+  "feature": "sdd/memory/constitution.md",
+  "phase": "constitution",
+  "agent_path": [
+    "orquestrador"
+  ],
+  "tokens_input": 0,
+  "tokens_output": 0,
+  "turns": 0,
+  "duration_seconds": 0,
+  "criterio_atendido": true,
+  "model": "claude-sonnet-5-5",
+  "rework_lines": 0,
+  "context7_calls": 0,
+  "git_calls": 0,
+  "files_touched": [
+    "sdd/memory/constitution.md",
+    "sdd/spec/stack.md",
+    "sdd/spec/modules.md",
+    "sdd/spec/flows.md",
+    "sdd/spec/overview.md",
+    "sdd/spec/decisions.md",
+    "sdd/spec/concepts.md",
+    "sdd/spec/adr/"
+  ],
+  "outcome": "approved",
+  "sdd_version": "4.8.0"
+}
