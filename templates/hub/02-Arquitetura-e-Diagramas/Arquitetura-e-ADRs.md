@@ -8,3 +8,7 @@ flowchart LR
 
 ## ADRs
 (lista de decisões)
+
+## Relacionados
+- [Índice geral](../00-LEIA-ME-INDICE-GERAL.md)
+- [Contexto mestre para IA](../01-Documentacao-Base-IA/Contexto-Mestre-para-IA.md)

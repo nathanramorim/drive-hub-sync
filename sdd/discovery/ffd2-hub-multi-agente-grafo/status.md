@@ -1,10 +1,7 @@
 # Status ffd2
 
-**Status:** 7 tasks especificadas em `features/`; aguardando confirmação para enfileirar.
+**Status:** tasks 01 a 06 implementadas; critérios 1 a 9 verificados por comando (grep, `check-hub-links.sh`, `json.tool`, `git check-ignore`, `forge brief --check`, `forge gate`).
 
-**Próximo passo:** confirmar e rodar `forge queue enqueue` na ordem 01 a 07, depois `forge dispatch ffd2-hub-multi-agente-grafo`.
+**Pendente:** critério 10 (teste manual nos 3 agentes, `TST-01`) precisa de humano com Drive; PR em revisão.
 
-**A confirmar:**
-1. Descer não cria arquivos novos no projeto (premissa).
-2. Nome do comando: `/drive-pull`.
-3. Formato do Codex: definido na task 01.
+**Premissas:** descer não cria arquivos; comando `/drive-pull`; Codex via `AGENTS.md` + `.agents/skills`.

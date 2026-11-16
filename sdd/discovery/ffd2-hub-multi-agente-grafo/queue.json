@@ -1,0 +1,124 @@
+{
+  "feature_id": "feat-ffd2-07",
+  "branch": "feat/ffd2-hub-multi-agente-grafo",
+  "spec_status": "reviewed",
+  "updated_at": "2026-11-16T11:24:55Z",
+  "items": [
+    {
+      "task_id": "feat-ffd2-01",
+      "title": "feat-ffd2-01: ADR-0004 (sync bidirecional, grafo e adaptador Codex)",
+      "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-01-adr-bidirecional-e-codex.md",
+      "status": "queued",
+      "rules": [
+        "SEG-07",
+        "FLX-05",
+        "GOV-01",
+        "DUP-10"
+      ],
+      "skills_used": [],
+      "attempts": 0
+    },
+    {
+      "task_id": "feat-ffd2-02",
+      "title": "feat-ffd2-02: skill com descer, conflitos e estado da sincronização",
+      "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-02-skill-descer-e-conflitos.md",
+      "status": "queued",
+      "depends_on": [
+        "feat-ffd2-01"
+      ],
+      "rules": [
+        "SEG-01",
+        "SEG-02",
+        "SEG-04",
+        "DUP-10",
+        "DUP-06"
+      ],
+      "skills_used": [],
+      "attempts": 0
+    },
+    {
+      "task_id": "feat-ffd2-03",
+      "title": "feat-ffd2-03: templates com links relativos e índice de relações",
+      "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-03-templates-grafo-e-links.md",
+      "status": "queued",
+      "depends_on": [
+        "feat-ffd2-01"
+      ],
+      "rules": [
+        "DUP-04",
+        "ARQ-03",
+        "ARQ-04",
+        "TST-02"
+      ],
+      "skills_used": [],
+      "attempts": 0
+    },
+    {
+      "task_id": "feat-ffd2-04",
+      "title": "feat-ffd2-04: `.drive-hub.json` com sentido por mapeamento e estado fora do git",
+      "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-04-config-sentido-e-estado.md",
+      "status": "queued",
+      "depends_on": [
+        "feat-ffd2-02"
+      ],
+      "rules": [
+        "ARQ-06",
+        "DUP-04",
+        "SEG-04",
+        "SEG-05"
+      ],
+      "skills_used": [],
+      "attempts": 0
+    },
+    {
+      "task_id": "feat-ffd2-05",
+      "title": "feat-ffd2-05: `/drive-pull` e adaptador do Codex",
+      "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-05-comando-pull-e-adaptador-codex.md",
+      "status": "queued",
+      "depends_on": [
+        "feat-ffd2-04"
+      ],
+      "rules": [
+        "ARQ-06",
+        "DUP-06",
+        "DUP-10",
+        "DUP-03"
+      ],
+      "skills_used": [],
+      "attempts": 0
+    },
+    {
+      "task_id": "feat-ffd2-06",
+      "title": "feat-ffd2-06: README, guia de Obsidian, site e release",
+      "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-06-docs-obsidian-e-release.md",
+      "status": "queued",
+      "depends_on": [
+        "feat-ffd2-04"
+      ],
+      "rules": [
+        "FLX-07",
+        "COD-05",
+        "SEG-05"
+      ],
+      "skills_used": [],
+      "attempts": 0
+    },
+    {
+      "task_id": "feat-ffd2-07",
+      "title": "feat-ffd2-07: validação final nos três agentes",
+      "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-07-validacao-final.md",
+      "status": "queued",
+      "depends_on": [
+        "feat-ffd2-05",
+        "feat-ffd2-06"
+      ],
+      "rules": [
+        "TST-01",
+        "TST-05",
+        "FLX-06"
+      ],
+      "skills_used": [],
+      "attempts": 0
+    }
+  ]
+}

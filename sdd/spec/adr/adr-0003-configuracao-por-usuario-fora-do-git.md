@@ -23,3 +23,5 @@ Opção 2. O `/drive-setup` grava `.drive-hub.json` na raiz do projeto do usuár
 - **Positivas:** nenhum dado pessoal no repositório; qualquer pessoa pode usar o plugin.
 - **Negativas / Trade-offs:** a configuração não é compartilhada entre a equipe.
 - **Ações de acompanhamento:** nenhuma.
+
+> **Ajuste (ADR-0004):** o estado da sincronização (`.drive-hub-state.json`) também fica fora do git, e `mappings` aceitam o campo opcional `sentido`.
