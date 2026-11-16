@@ -18,7 +18,7 @@
       "01-Documentacao-Base-IA/Contexto-Mestre-para-IA.md",
       "02-Arquitetura-e-Diagramas/Arquitetura-e-ADRs.md"
     ],
-    "sentido": "ambos"
+    "sentido": "subir"
   },
   {
     "gatilho": "marketing",
@@ -30,6 +30,6 @@
       "04-Marketing-e-Landing-Page/assets/",
       "04-Marketing-e-Landing-Page/roteiros-e-posts/"
     ],
-    "sentido": "ambos"
+    "sentido": "subir"
   }
 ]
