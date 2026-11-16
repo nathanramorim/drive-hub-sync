@@ -1,5 +1,35 @@
 [
-  { "gatilho": "release", "origem": ["sdd/releases/**"], "destino": ["03-Releases-e-Roadmap/Historico-de-Atualizacoes-e-Roadmap.md"] },
-  { "gatilho": "arquitetura", "origem": ["sdd/spec/adr/**"], "destino": ["01-Documentacao-Base-IA/Contexto-Mestre-para-IA.md", "02-Arquitetura-e-Diagramas/Arquitetura-e-ADRs.md"] },
-  { "gatilho": "marketing", "origem": ["site/**"], "destino": ["04-Marketing-e-Landing-Page/Copy-Landing-Page-e-Posicionamento.md", "04-Marketing-e-Landing-Page/assets/", "04-Marketing-e-Landing-Page/roteiros-e-posts/"] }
+  {
+    "gatilho": "release",
+    "origem": [
+      "sdd/releases/**"
+    ],
+    "destino": [
+      "03-Releases-e-Roadmap/Historico-de-Atualizacoes-e-Roadmap.md"
+    ],
+    "sentido": "subir"
+  },
+  {
+    "gatilho": "arquitetura",
+    "origem": [
+      "sdd/spec/adr/**"
+    ],
+    "destino": [
+      "01-Documentacao-Base-IA/Contexto-Mestre-para-IA.md",
+      "02-Arquitetura-e-Diagramas/Arquitetura-e-ADRs.md"
+    ],
+    "sentido": "subir"
+  },
+  {
+    "gatilho": "marketing",
+    "origem": [
+      "site/**"
+    ],
+    "destino": [
+      "04-Marketing-e-Landing-Page/Copy-Landing-Page-e-Posicionamento.md",
+      "04-Marketing-e-Landing-Page/assets/",
+      "04-Marketing-e-Landing-Page/roteiros-e-posts/"
+    ],
+    "sentido": "subir"
+  }
 ]

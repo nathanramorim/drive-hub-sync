@@ -23,3 +23,5 @@ Opção 2. Só Markdown, HTML, Mermaid, imagens, vídeo e PDF são gravados. A e
 - **Positivas:** menor risco de vazamento; o usuário sempre vê o que vai ao Drive.
 - **Negativas / Trade-offs:** mais um passo de confirmação; formatos fora da lista são recusados.
 - **Ações de acompanhamento:** manter a lista de exclusão apenas na skill (`DUP-06`).
+
+> **Ajuste (ADR-0004):** a regra de só circular documentação e confirmar antes de gravar vale também para a descida (hub → projeto).

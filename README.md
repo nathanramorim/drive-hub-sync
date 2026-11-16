@@ -6,6 +6,7 @@
   <a href="https://github.com/nathanramorim/drive-hub-sync/releases"><img alt="versão" src="https://img.shields.io/github/v/tag/nathanramorim/drive-hub-sync?label=vers%C3%A3o&color=2563eb"></a>
   <img alt="licença" src="https://img.shields.io/badge/licen%C3%A7a-MIT-16a34a">
   <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-plugin-7c3aed">
+  <img alt="Codex" src="https://img.shields.io/badge/Codex-AGENTS.md-10b981">
   <img alt="agy" src="https://img.shields.io/badge/agy-skill-06b6d4">
   <img alt="sem código" src="https://img.shields.io/badge/c%C3%B3digo%20no%20Drive-nunca-f59e0b">
 </p>
@@ -41,7 +42,7 @@ Meu Drive/Projetos/meu-projeto/
 ## Antes de começar
 
 1. **Google Drive para computador** instalado e com login feito.
-2. **Claude Code** ou **agy (Antigravity)**.
+2. **Claude Code**, **Codex** ou **agy (Antigravity)**.
 
 ## Instalação
 
@@ -62,6 +63,17 @@ cp -R drive-hub-sync/skills/drive-hub .agents/skills/
 
 > Teste no seu agy: o plugin usa a pasta `.agents/skills/` do projeto. Se o seu agy usar outro local para skills, copie a pasta `drive-hub` para lá.
 
+### No Codex
+
+```bash
+git clone https://github.com/nathanramorim/drive-hub-sync.git
+mkdir -p .agents/skills
+cp -R drive-hub-sync/skills/drive-hub .agents/skills/
+cat drive-hub-sync/codex/AGENTS.md >> AGENTS.md
+```
+
+O Codex lê skills de `.agents/skills` e o `AGENTS.md` do projeto (documentação oficial do Codex).
+
 ## Como usar
 
 **1. Configurar (uma vez por projeto)**
@@ -80,8 +92,23 @@ Ele pergunta a pasta de destino (ex.: `Meu Drive/Projetos`), o nome do projeto e
 
 No Claude, escolha uma parte: `/drive-sync release`, `/drive-sync arquitetura` ou `/drive-sync marketing`.
 
+**3. Trazer as edições do Drive (opcional)**
+
+| Claude Code | Codex e agy |
+|---|---|
+| `/drive-pull` | "Traga as edições do Drive para o projeto" |
+
+Só mapeamentos com `"sentido": "ambos"` descem, só para arquivos que já existem no projeto. Se os dois lados mudaram, ele pergunta qual manter e não sobrescreve.
+
+## Guia rápido de Obsidian
+
+1. No Obsidian, escolha **Abrir pasta como cofre** e selecione a pasta do projeto no Drive.
+2. Cada documento tem a seção `Relacionados` com links; abra o **Grafo** para ver as ligações.
+3. Edite à vontade; depois rode `/drive-pull` (ou peça ao Codex ou agy) para trazer as mudanças. A pasta `.obsidian/` é ignorada.
+
 ## Segurança
 
+- Na descida, grava só em documentos já mapeados e pergunta em qualquer conflito.
 - Nunca copia código-fonte, senhas ou binários.
 - Escreve só dentro da pasta do projeto no Drive.
 - Sempre pede confirmação antes de gravar.
@@ -99,6 +126,7 @@ Há uma versão ilustrada, em linguagem simples, em [`site/index.html`](site/ind
 
 | Versão | Novidades |
 |---|---|
+| **0.2.0** | Descer edições do Drive para o projeto (`/drive-pull`) com pergunta em conflitos, links entre documentos para o grafo do Obsidian e suporte ao Codex. |
 | **0.1.2** | O banner agora mostra a árvore do Drive recusando um arquivo de código. |
 | **0.1.1** | Corrige o texto do banner que saía dos rótulos das pastas. |
 | **0.1.0** | Primeira versão: `/drive-setup`, `/drive-sync`, skill `drive-hub`, esqueleto do hub e página de apresentação. |

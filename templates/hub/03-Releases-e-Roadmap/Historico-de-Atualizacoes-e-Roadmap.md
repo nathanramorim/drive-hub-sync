@@ -5,3 +5,7 @@
 
 ## Roadmap
 (próximos passos)
+
+## Relacionados
+- [Índice geral](../00-LEIA-ME-INDICE-GERAL.md)
+- [Copy e posicionamento](../04-Marketing-e-Landing-Page/Copy-Landing-Page-e-Posicionamento.md)
