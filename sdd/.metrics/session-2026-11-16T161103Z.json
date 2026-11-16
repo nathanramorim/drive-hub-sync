@@ -1,0 +1,21 @@
+{
+  "$schema": "forge-sdd/metrics/1.0",
+  "feature": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-07-validacao-final-tres-agentes.md",
+  "agent_path": [
+    "lider"
+  ],
+  "tokens_input": 0,
+  "tokens_output": 0,
+  "turns": 0,
+  "duration_seconds": 0,
+  "criterio_atendido": true,
+  "model": "claude-sonnet-5-5",
+  "rework_lines": 0,
+  "context7_calls": 0,
+  "git_calls": 0,
+  "files_touched": [
+    "sdd/discovery/ffd2-hub-multi-agente-grafo/status.md"
+  ],
+  "outcome": "approved",
+  "sdd_version": "4.8.0"
+}

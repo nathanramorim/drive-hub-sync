@@ -1,0 +1,20 @@
+{
+  "$schema": "forge-sdd/metrics/1.0",
+  "feature": "sdd/discovery/ffd2-hub-multi-agente-grafo/criteria.md",
+  "phase": "job-20261116-ffd2-07-review",
+  "agent_path": [
+    "reviewer"
+  ],
+  "tokens_input": 5617,
+  "tokens_output": 18097,
+  "turns": 0,
+  "duration_seconds": 0,
+  "criterio_atendido": true,
+  "model": "",
+  "rework_lines": 0,
+  "context7_calls": 0,
+  "git_calls": 0,
+  "files_touched": null,
+  "outcome": "approved",
+  "sdd_version": "4.8.0"
+}

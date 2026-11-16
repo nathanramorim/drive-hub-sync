@@ -1,0 +1,28 @@
+{
+  "veredito": "duvida",
+  "achados": [
+    {
+      "verificacao": "S-05",
+      "regra": "TST-01",
+      "classificacao": "duvida",
+      "severidade": "media",
+      "arquivo": "sdd/discovery/ffd2-hub-multi-agente-grafo/status.md",
+      "linha": 5,
+      "evidencia": "**Pendente:** critério 10 (teste manual nos 3 agentes, `TST-01`) precisa de humano com Drive",
+      "explicacao": "O critério 10 (subir com links, descer só o mapeado, conflito pergunta, .js recusado, nos 3 agentes) não tem evidência de execução. Sem ela não dá para confirmar essa parte da spec.",
+      "correcao": "Executar o teste manual e registrar o resultado, ou aceitar explicitamente a pendência."
+    },
+    {
+      "verificacao": "S-03",
+      "regra": "GOV-01",
+      "classificacao": "duvida",
+      "severidade": "media",
+      "arquivo": ".forge/config/forge.json",
+      "linha": 110,
+      "evidencia": "-    \"require_existing_card\": true,\n+    \"require_existing_card\": false,",
+      "explicacao": "O PR afrouxa uma exigência do pipeline, fora do escopo dos critérios ffd2, e também versiona sdd/.metrics/session-*.json. Não achei segredo nem caminho pessoal, mas a mudança de portão não tem ADR nem justificativa.",
+      "correcao": "Confirmar se a mudança em forge.json e a telemetria devem entrar neste PR ou sair dele."
+    }
+  ],
+  "resumo": "O rework 2 resolveu a dúvida anterior: os mapeamentos agregados arquitetura e marketing voltaram a `subir`, então a descida não precisa de regra destino→origem (SEG-02). Critérios 1 a 9 conferem. ADR-0004 foi aprovada, com notas nas ADR-0002 e ADR-0003. O drive-pull só referencia a skill. `.drive-hub-state.json` está no .gitignore. check-hub-links.sh retorna 0. O adaptador Codex cita a doc oficial. A seção Regras só recebeu adições. Não achei segredo, caminho pessoal nem injeção. Duas confirmações humanas pendentes: a evidência do teste manual do critério 10 e o `require_existing_card` alterado em forge.json, junto com a telemetria no PR."
+}
