@@ -2,13 +2,13 @@
   "feature_id": "feat-ffd2-07",
   "branch": "feat/ffd2-hub-multi-agente-grafo",
   "spec_status": "reviewed",
-  "updated_at": "2026-11-16T11:24:55Z",
+  "updated_at": "2026-11-16T12:18:04Z",
   "items": [
     {
       "task_id": "feat-ffd2-01",
       "title": "feat-ffd2-01: ADR-0004 (sync bidirecional, grafo e adaptador Codex)",
       "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-01-adr-bidirecional-e-codex.md",
-      "status": "queued",
+      "status": "approved",
       "rules": [
         "SEG-07",
         "FLX-05",
@@ -16,13 +16,18 @@
         "DUP-10"
       ],
       "skills_used": [],
-      "attempts": 0
+      "attempts": 1,
+      "governance_verdict": {
+        "veredito": "conforme",
+        "achados": [],
+        "resumo": "As duas dúvidas do rework anterior foram resolvidas. (1) TST-01: a pessoa aceitou o critério 10 (teste manual) como pendência, e isso está registrado em status.md. (2) GOV-01: o commit 5d5cc68 voltou `require_existing_card` para `true` em .forge/config/forge.json. Esse arquivo vem da adoção do Forge (534f23d) e não tem mais alteração de portão. A telemetria em sdd/.metrics segue versionada por decisão humana registrada. Critérios 1 a 9 conferem. ADR-0004 foi aprovada, com notas nas ADR-0002 e ADR-0003. `commands/drive-pull.md` só referencia a skill. `.drive-hub-state.json` está no .gitignore. `scripts/check-hub-links.sh` retorna 0. O adaptador Codex cita a doc oficial. A seção Regras só recebeu adições. Os mapeamentos agregados voltaram a `subir`, então a descida só atua em origens mapeadas (SEG-02). Não encontrei segredo, caminho pessoal nem injeção no diff."
+      }
     },
     {
       "task_id": "feat-ffd2-02",
       "title": "feat-ffd2-02: skill com descer, conflitos e estado da sincronização",
       "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-02-skill-descer-e-conflitos.md",
-      "status": "queued",
+      "status": "approved",
       "depends_on": [
         "feat-ffd2-01"
       ],
@@ -34,13 +39,18 @@
         "DUP-06"
       ],
       "skills_used": [],
-      "attempts": 0
+      "attempts": 1,
+      "governance_verdict": {
+        "veredito": "conforme",
+        "achados": [],
+        "resumo": "As duas dúvidas do rework anterior foram resolvidas. (1) TST-01: a pessoa aceitou o critério 10 (teste manual) como pendência, e isso está registrado em status.md. (2) GOV-01: o commit 5d5cc68 voltou `require_existing_card` para `true` em .forge/config/forge.json. Esse arquivo vem da adoção do Forge (534f23d) e não tem mais alteração de portão. A telemetria em sdd/.metrics segue versionada por decisão humana registrada. Critérios 1 a 9 conferem. ADR-0004 foi aprovada, com notas nas ADR-0002 e ADR-0003. `commands/drive-pull.md` só referencia a skill. `.drive-hub-state.json` está no .gitignore. `scripts/check-hub-links.sh` retorna 0. O adaptador Codex cita a doc oficial. A seção Regras só recebeu adições. Os mapeamentos agregados voltaram a `subir`, então a descida só atua em origens mapeadas (SEG-02). Não encontrei segredo, caminho pessoal nem injeção no diff."
+      }
     },
     {
       "task_id": "feat-ffd2-03",
       "title": "feat-ffd2-03: templates com links relativos e índice de relações",
       "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-03-templates-grafo-e-links.md",
-      "status": "queued",
+      "status": "approved",
       "depends_on": [
         "feat-ffd2-01"
       ],
@@ -51,13 +61,18 @@
         "TST-02"
       ],
       "skills_used": [],
-      "attempts": 0
+      "attempts": 1,
+      "governance_verdict": {
+        "veredito": "conforme",
+        "achados": [],
+        "resumo": "As duas dúvidas do rework anterior foram resolvidas. (1) TST-01: a pessoa aceitou o critério 10 (teste manual) como pendência, e isso está registrado em status.md. (2) GOV-01: o commit 5d5cc68 voltou `require_existing_card` para `true` em .forge/config/forge.json. Esse arquivo vem da adoção do Forge (534f23d) e não tem mais alteração de portão. A telemetria em sdd/.metrics segue versionada por decisão humana registrada. Critérios 1 a 9 conferem. ADR-0004 foi aprovada, com notas nas ADR-0002 e ADR-0003. `commands/drive-pull.md` só referencia a skill. `.drive-hub-state.json` está no .gitignore. `scripts/check-hub-links.sh` retorna 0. O adaptador Codex cita a doc oficial. A seção Regras só recebeu adições. Os mapeamentos agregados voltaram a `subir`, então a descida só atua em origens mapeadas (SEG-02). Não encontrei segredo, caminho pessoal nem injeção no diff."
+      }
     },
     {
       "task_id": "feat-ffd2-04",
       "title": "feat-ffd2-04: `.drive-hub.json` com sentido por mapeamento e estado fora do git",
       "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-04-config-sentido-e-estado.md",
-      "status": "queued",
+      "status": "approved",
       "depends_on": [
         "feat-ffd2-02"
       ],
@@ -68,13 +83,18 @@
         "SEG-05"
       ],
       "skills_used": [],
-      "attempts": 0
+      "attempts": 1,
+      "governance_verdict": {
+        "veredito": "conforme",
+        "achados": [],
+        "resumo": "As duas dúvidas do rework anterior foram resolvidas. (1) TST-01: a pessoa aceitou o critério 10 (teste manual) como pendência, e isso está registrado em status.md. (2) GOV-01: o commit 5d5cc68 voltou `require_existing_card` para `true` em .forge/config/forge.json. Esse arquivo vem da adoção do Forge (534f23d) e não tem mais alteração de portão. A telemetria em sdd/.metrics segue versionada por decisão humana registrada. Critérios 1 a 9 conferem. ADR-0004 foi aprovada, com notas nas ADR-0002 e ADR-0003. `commands/drive-pull.md` só referencia a skill. `.drive-hub-state.json` está no .gitignore. `scripts/check-hub-links.sh` retorna 0. O adaptador Codex cita a doc oficial. A seção Regras só recebeu adições. Os mapeamentos agregados voltaram a `subir`, então a descida só atua em origens mapeadas (SEG-02). Não encontrei segredo, caminho pessoal nem injeção no diff."
+      }
     },
     {
       "task_id": "feat-ffd2-05",
       "title": "feat-ffd2-05: `/drive-pull` e adaptador do Codex",
       "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-05-comando-pull-e-adaptador-codex.md",
-      "status": "queued",
+      "status": "approved",
       "depends_on": [
         "feat-ffd2-04"
       ],
@@ -85,13 +105,18 @@
         "DUP-03"
       ],
       "skills_used": [],
-      "attempts": 0
+      "attempts": 1,
+      "governance_verdict": {
+        "veredito": "conforme",
+        "achados": [],
+        "resumo": "As duas dúvidas do rework anterior foram resolvidas. (1) TST-01: a pessoa aceitou o critério 10 (teste manual) como pendência, e isso está registrado em status.md. (2) GOV-01: o commit 5d5cc68 voltou `require_existing_card` para `true` em .forge/config/forge.json. Esse arquivo vem da adoção do Forge (534f23d) e não tem mais alteração de portão. A telemetria em sdd/.metrics segue versionada por decisão humana registrada. Critérios 1 a 9 conferem. ADR-0004 foi aprovada, com notas nas ADR-0002 e ADR-0003. `commands/drive-pull.md` só referencia a skill. `.drive-hub-state.json` está no .gitignore. `scripts/check-hub-links.sh` retorna 0. O adaptador Codex cita a doc oficial. A seção Regras só recebeu adições. Os mapeamentos agregados voltaram a `subir`, então a descida só atua em origens mapeadas (SEG-02). Não encontrei segredo, caminho pessoal nem injeção no diff."
+      }
     },
     {
       "task_id": "feat-ffd2-06",
       "title": "feat-ffd2-06: README, guia de Obsidian, site e release",
       "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-06-docs-obsidian-e-release.md",
-      "status": "queued",
+      "status": "approved",
       "depends_on": [
         "feat-ffd2-04"
       ],
@@ -101,7 +126,12 @@
         "SEG-05"
       ],
       "skills_used": [],
-      "attempts": 0
+      "attempts": 1,
+      "governance_verdict": {
+        "veredito": "conforme",
+        "achados": [],
+        "resumo": "As duas dúvidas do rework anterior foram resolvidas. (1) TST-01: a pessoa aceitou o critério 10 (teste manual) como pendência, e isso está registrado em status.md. (2) GOV-01: o commit 5d5cc68 voltou `require_existing_card` para `true` em .forge/config/forge.json. Esse arquivo vem da adoção do Forge (534f23d) e não tem mais alteração de portão. A telemetria em sdd/.metrics segue versionada por decisão humana registrada. Critérios 1 a 9 conferem. ADR-0004 foi aprovada, com notas nas ADR-0002 e ADR-0003. `commands/drive-pull.md` só referencia a skill. `.drive-hub-state.json` está no .gitignore. `scripts/check-hub-links.sh` retorna 0. O adaptador Codex cita a doc oficial. A seção Regras só recebeu adições. Os mapeamentos agregados voltaram a `subir`, então a descida só atua em origens mapeadas (SEG-02). Não encontrei segredo, caminho pessoal nem injeção no diff."
+      }
     },
     {
       "task_id": "feat-ffd2-07",
