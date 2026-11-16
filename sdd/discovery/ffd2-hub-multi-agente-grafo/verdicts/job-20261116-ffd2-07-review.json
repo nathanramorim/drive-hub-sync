@@ -1,0 +1,5 @@
+{
+  "veredito": "conforme",
+  "achados": [],
+  "resumo": "O PR altera só status.md da iniciativa, para registrar a validação final (task 07). Reexecutei check-hub-links.sh (retorno 0, 5 páginas) e forge brief --check (retorno 0), o que bate com os critérios 5, 6 e 9 declarados. O critério 10 (teste manual, TST-01) segue como pendência aceita pela pessoa e registrada no status, sem alegar evidência. Não há código, segredo, caminho pessoal nem injeção no diff."
+}

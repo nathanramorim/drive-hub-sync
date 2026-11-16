@@ -2,7 +2,7 @@
   "feature_id": "feat-ffd2-07",
   "branch": "feat/ffd2-hub-multi-agente-grafo",
   "spec_status": "reviewed",
-  "updated_at": "2026-11-16T12:18:04Z",
+  "updated_at": "2026-11-16T16:35:01Z",
   "items": [
     {
       "task_id": "feat-ffd2-01",
@@ -137,7 +137,7 @@
       "task_id": "feat-ffd2-07",
       "title": "feat-ffd2-07: validação final nos três agentes",
       "spec_path": "sdd/discovery/ffd2-hub-multi-agente-grafo/features/feat-ffd2-07-validacao-final.md",
-      "status": "queued",
+      "status": "approved",
       "depends_on": [
         "feat-ffd2-05",
         "feat-ffd2-06"
@@ -148,7 +148,12 @@
         "FLX-06"
       ],
       "skills_used": [],
-      "attempts": 0
+      "attempts": 1,
+      "governance_verdict": {
+        "veredito": "conforme",
+        "achados": [],
+        "resumo": "O PR altera só status.md da iniciativa, para registrar a validação final (task 07). Reexecutei check-hub-links.sh (retorno 0, 5 páginas) e forge brief --check (retorno 0), o que bate com os critérios 5, 6 e 9 declarados. O critério 10 (teste manual, TST-01) segue como pendência aceita pela pessoa e registrada no status, sem alegar evidência. Não há código, segredo, caminho pessoal nem injeção no diff."
+      }
     }
   ]
 }

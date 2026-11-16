@@ -1,0 +1,39 @@
+{
+  "veredito": "duvida",
+  "achados": [
+    {
+      "verificacao": "S-01",
+      "regra": "SEG-02",
+      "classificacao": "duvida",
+      "severidade": "media",
+      "arquivo": "templates/mappings.sdd.json",
+      "linha": 14,
+      "evidencia": "\"gatilho\": \"arquitetura\", \"origem\": [\"sdd/spec/adr/**\"], \"destino\": [\"01-Documentacao-Base-IA/Contexto-Mestre-para-IA.md\", \"02-Arquitetura-e-Diagramas/Arquitetura-e-ADRs.md\"], \"sentido\": \"ambos\"",
+      "explicacao": "O template marca como `ambos` mapeamentos em que o destino é um arquivo agregado do hub e a origem é um glob de vários arquivos (ADRs, site). A skill não define como uma edição num arquivo agregado do hub vira escrita em uma origem específica. Isso pode gravar no arquivo errado ou ser impossível de resolver, e o critério 3 exige escrita só nas origens mapeadas.",
+      "correcao": "Confirmar se `arquitetura` e `marketing` devem descer; se sim, definir na skill a regra de correspondência destino→origem, senão deixar esses mapeamentos como `subir`."
+    },
+    {
+      "verificacao": "S-05",
+      "regra": "TST-01",
+      "classificacao": "duvida",
+      "severidade": "media",
+      "arquivo": "sdd/discovery/ffd2-hub-multi-agente-grafo/status.md",
+      "linha": 5,
+      "evidencia": "**Pendente:** critério 10 (teste manual nos 3 agentes, `TST-01`) precisa de humano com Drive; PR em revisão.",
+      "explicacao": "O critério 10 (subir com links, descer só o mapeado, conflito pergunta, `.js` recusado, nos 3 agentes) não tem evidência de execução. Sem ela não dá para confirmar a conformidade com a spec.",
+      "correcao": "A pessoa executa o teste manual do critério 10 e registra o resultado, ou aceita explicitamente a pendência."
+    },
+    {
+      "verificacao": "S-03",
+      "regra": "GOV-01",
+      "classificacao": "duvida",
+      "severidade": "baixa",
+      "arquivo": ".forge/config/forge.json",
+      "linha": 1,
+      "evidencia": "+++ b/.forge/config/forge.json (arquivo novo, 129 linhas); também sdd/.metrics/session-*.json (4 arquivos)",
+      "explicacao": "O PR inclui configuração do pipeline e telemetria de sessão, fora do escopo dos critérios ffd2. Não achei segredo nem caminho pessoal neles. Falta confirmar se devem ser versionados.",
+      "correcao": "Confirmar se esses arquivos entram no PR ou se ficam no .gitignore."
+    }
+  ],
+  "resumo": "Critérios 1 a 9 conferem. ADR-0004 aprovada, com notas em ADR-0002 e ADR-0003. O comando `drive-pull` só referencia a skill. `.drive-hub-state.json` está no .gitignore. `scripts/check-hub-links.sh` retorna 0, com 5 páginas e 4 entradas no índice mais o próprio índice. O adaptador do Codex cita a doc oficial. `.obsidian/` é ignorado e a seção Regras só recebeu adições. Não encontrei segredo, caminho pessoal nem injeção no diff. Três pontos pedem confirmação humana: a correspondência destino→origem dos mapeamentos `ambos` agregados, a falta de evidência do teste manual do critério 10 e a presença de arquivos do pipeline e de telemetria no PR."
+}
