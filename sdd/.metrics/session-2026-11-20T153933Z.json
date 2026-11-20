@@ -1,0 +1,25 @@
+{
+  "$schema": "forge-sdd/metrics/1.0",
+  "feature": "sdd/discovery/1fc7-recibo-e-limpeza-origem/features/feat-1fc7-01-recibo-e-limpeza-origem.md",
+  "phase": "1fc7",
+  "agent_path": [
+    "pm-architect"
+  ],
+  "tokens_input": 4356,
+  "tokens_output": 1218,
+  "turns": 0,
+  "duration_seconds": 0,
+  "criterio_atendido": false,
+  "model": "",
+  "rework_lines": 0,
+  "context7_calls": 0,
+  "git_calls": 0,
+  "files_touched": [
+    "sdd/discovery/1fc7-recibo-e-limpeza-origem/status.md",
+    "sdd/discovery/1fc7-recibo-e-limpeza-origem/features/feat-1fc7-01-recibo-e-limpeza-origem.md"
+  ],
+  "outcome": "blocked",
+  "sdd_version": "5.0.0",
+  "medicao": "estimado",
+  "complexidade": null
+}
