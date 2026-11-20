@@ -1,0 +1,25 @@
+{
+  "$schema": "forge-sdd/metrics/1.0",
+  "feature": "sdd/discovery/ee95-idempotencia-sha256-sufixo/features/feat-ee95-01-idempotencia-sha256-sufixo.md",
+  "phase": "ee95",
+  "agent_path": [
+    "pm-architect"
+  ],
+  "tokens_input": 4102,
+  "tokens_output": 1161,
+  "turns": 0,
+  "duration_seconds": 0,
+  "criterio_atendido": false,
+  "model": "",
+  "rework_lines": 0,
+  "context7_calls": 0,
+  "git_calls": 0,
+  "files_touched": [
+    "sdd/discovery/ee95-idempotencia-sha256-sufixo/status.md",
+    "sdd/discovery/ee95-idempotencia-sha256-sufixo/features/feat-ee95-01-idempotencia-sha256-sufixo.md"
+  ],
+  "outcome": "blocked",
+  "sdd_version": "5.0.0",
+  "medicao": "estimado",
+  "complexidade": null
+}
